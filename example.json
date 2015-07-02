@@ -1,0 +1,22 @@
+﻿{
+	"operation_location": "C:\\",
+	"server_location": "Z:\\",
+	"name_regex": "\\[.*\\]\\s(.*)\\s-",
+  	"episode_regex": "\\[.*\\]\\s.*\\s-\\s(\\d*)",
+  	"plexname_regex": "(.*)\\s-",
+  	"plexseason_regex": ".*s(\\d*)",
+  	"plexep_regex": ".*e(\\d*)",
+	"show_settings": {
+		"Show A": {
+			"altname": "Show B",
+			"season": 2,
+			"adjust": 51
+		},
+		"Show C": {
+			"season": 3
+		},
+		"Show D": {
+			"altname": "Show E"
+		}
+	}
+}
