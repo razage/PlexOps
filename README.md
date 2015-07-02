@@ -6,8 +6,8 @@ The simplest way to use PlexOps is to double click run_plexops.py Should you not
 
 ### Configuration
 PlexOps expects a settings.json file to be present in its directory. It will stop if this file is not present. The following settings are required:
-* operation_location: This is the directory that PlexOps will look at. This should be an escaped path (Ex: C:\\ for C drive)
-* server_location: This is the directory that files are uploaded to. It should be the root of whatever library you want to upload to and escaped (Ex: Z:\\Movies\\)
+* operation_location: This is the directory that PlexOps will look at. This should be an escaped path.
+* server_location: This is the directory that files are uploaded to. It should be the root of whatever library you want to upload to and escaped.
 * name_regex: This is a regular expression for extracting the series name from a file that hasn't been renamed yet.
 * epsiode_regex: This is a regular expression for extracting the episode number from a file that hasn't been renamed yet.
 * plexname_regex: This is a regular expression for extracting the series name from a file that has been renamed.
