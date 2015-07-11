@@ -27,6 +27,6 @@ def rename(plexops_app):
                     fdata['name'] = _showsettings['altname']
 
             move(join(plexops_app.operation_location, fdata['location']), join(plexops_app.operation_location,
-                                                                               "%s - s%sse%s.mkv" % (
+                                                                               "%s - s%se%s.mkv" % (
                                                                                    fdata['name'], fdata['season'],
                                                                                    fdata['ep'])))
