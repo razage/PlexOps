@@ -16,8 +16,7 @@ def rename(plexops_app):
                      "ep": padandstringify(rename_regex['episode'].match(files).group(1)), "season": "01"}
             fdata['name'] = fdata['name'].replace("_", " ")
             if fdata['name'] in plexops_app.get_settings('show_settings'):
-                plexops_app.logger.info("[%s] Series %s has settings configured. Adjusting data..." % (
-                    getcurrenttime(), fdata['name']))
+                print("[%s] Series %s has settings configured. Adjusting data..." % (getcurrenttime(), fdata['name']))
                 _showsettings = plexops_app.get_showsettings(fdata['name'])
                 if 'season' in _showsettings:
                     fdata['season'] = padandstringify(_showsettings['season'])

@@ -1,24 +1,20 @@
 from json import load
-from logging import getLogger
-from logging.handlers import RotatingFileHandler
 from sys import exit
 from time import strftime
 
 
 class PlexOps:
     def __init__(self):
-        self.logger = getLogger("PlexOpsLogger")
-        self.logger.addHandler(RotatingFileHandler("plexops_log.txt"))
         try:
             self.settings = load(open("settings.json"))
         except FileNotFoundError:
-            self.logger.critical("[%s] Critical Error: Settings.json not found." % getcurrenttime())
+            print("[%s] Critical Error: Settings.json not found." % getcurrenttime())
             self.abort()
         self.operation_location = self.settings['operation_location']
         self.server_location = self.settings['server_location']
 
     def abort(self):
-        self.logger.info("Terminating PlexOps...")
+        print("Terminating PlexOps...")
         exit()
 
     def get_settings(self, setting):
