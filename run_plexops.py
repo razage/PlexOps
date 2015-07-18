@@ -1,12 +1,12 @@
-from PlexOps import PlexOps
+from PlexOps import getcurrenttime, PlexOps
 from PlexOps.renamer import rename
 from PlexOps.uploader import uploadfiles
 
 if __name__ == "__main__":
     p = PlexOps()
-    print("Starting renamer...")
+    print("[%s] Starting renamer..." % getcurrenttime())
     rename(p)
-    print("Renaming complete. \n Starting uploader...")
+    print("[%s] Renaming complete. \n[%s] Starting uploader..." % (getcurrenttime(), getcurrenttime()))
     uploadfiles(p)
-    print("Uploading complete. Aborting PlexOps...")
+    print("[%s] Uploading complete. Aborting PlexOps..." % getcurrenttime())
     p.abort()

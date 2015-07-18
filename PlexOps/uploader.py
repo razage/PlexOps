@@ -12,7 +12,7 @@ def uploadfiles(plexops_app):
                       "episode": compile(plexops_app.get_settings('plexep_regex'))}
 
     if not isdir(plexops_app.get_settings('server_location')):
-        print("Server unreachable. Aborting...")
+        print("[%s] Server unreachable. Aborting..." % getcurrenttime())
         plexops_app.abort()
 
     for files in listdir(plexops_app.get_settings('operation_location')):
@@ -27,5 +27,5 @@ def uploadfiles(plexops_app):
 
             move(join(plexops_app.operation_location, fdata['file']),
                  join(plexops_app.server_location, fdata['series'], "Season " + fdata['season'], fdata['file']))
-            print("[%s] Moved %s s%se%sto the server." % (
+            print("[%s] Moved %s s%se%s to the server." % (
             getcurrenttime(), fdata['series'], fdata['season'], fdata['episode']))

@@ -14,7 +14,7 @@ class PlexOps:
         self.server_location = self.settings['server_location']
 
     def abort(self):
-        print("Terminating PlexOps...")
+        print("[%s] Terminating PlexOps..." % getcurrenttime())
         exit()
 
     def get_settings(self, setting):
