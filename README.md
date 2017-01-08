@@ -2,7 +2,7 @@
 PlexOps is a simple collection of renaming and moving functions to simplify moving media to a Plex server. Currently I have only tested it with anime naming schemes, but you should be able to use whatever regex you want.
 
 ## Use
-The simplest way to use PlexOps is to double click run_plexops.py Should you not want to do both operations, simple instantiate PlexOps and run the PlexOps.renamer.rename or PlexOps.uploader.uploadfiles
+The simplest way to use PlexOps is to double click run_plexops.py Should you not want to do both operations, simply instantiate PlexOps and run the PlexOps.renamer.rename or PlexOps.uploader.uploadfiles
 
 ### Configuration
 PlexOps expects a settings.json file to be present in its directory. It will stop if this file is not present. The following settings are required:
